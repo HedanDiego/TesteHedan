@@ -1,5 +1,12 @@
 {
     "baseUrl": "http://localhost:3000",
     "viewportWidth": 1440,
-    "viewportHeight": 900
+    "viewportHeight": 900,
+    "dbConfig": {
+        "host": "lallah.db.elephantsql.com",
+        "user": "xasuqnxe",
+        "password": "3KIKxICeyvl8g5uXPWROj8YY6qwUXpLF",
+        "database": "xasuqnxe",
+        "port": 5432
+    }
 }
