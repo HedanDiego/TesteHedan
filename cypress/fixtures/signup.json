@@ -1,0 +1,23 @@
+{
+  "success": {
+    "name": "Hedan Costa",
+    "email": "hedan.costa@teste.com",
+    "password": "asd123"
+  },
+  "email_dup": {
+    "name": "Diego Costa",
+    "email": "diego.costa@teste.com",
+    "password": "pwd123",
+    "is_provider": true
+  },
+  "email_inv": {
+    "name": "Diego Costa",
+    "email": "diego.costateste.com",
+    "password": "pwd123"
+  },
+  "short_password": {
+    "name": "Diego Costa",
+    "email": "diego.costa@teste.com",
+    "password": null
+  }
+}
