@@ -1,5 +1,6 @@
 import { el } from './elements'
 import header from '../../components/header'
+
 class DashPage {
 
     constructor() {
@@ -7,7 +8,7 @@ class DashPage {
     }
 
     calendarShoudlBeVisible(){
-        cy.get('.DayPicker', {timeout: 7000})
+        cy.get(el.calendar, {timeout: 7000})
             .should('be.visible')
     }
 
