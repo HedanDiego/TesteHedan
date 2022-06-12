@@ -29,6 +29,7 @@ import { apiServer } from '../../cypress.json'
 import loginPage from './pages/login'
 import dashPage from './pages/dash'
 
+//App Actions
 Cypress.Commands.add('uiLogin', function (user) {
     loginPage.go()
     loginPage.form(user)
@@ -121,7 +122,7 @@ Cypress.Commands.add('setProviderId', function (providerEmail) {
 
 })
 
-Cypress.Commands.add('apiLogin', function (user) {
+Cypress.Commands.add('apiLogin', function (user, setLocalStorage = false) {
 
     const payload = {
         email: user.email,
@@ -135,5 +136,16 @@ Cypress.Commands.add('apiLogin', function (user) {
     }).then(function (response) {
         expect(response.status).to.eq(200)
         Cypress.env('apiToken', response.body.token) //Armazena token na variavel 'apiToken'
+
+
+        if (setLocalStorage) {
+            const { token, user } = response.body
+
+            window.localStorage.setItem('@Samurai:token', token)
+            window.localStorage.setItem('@Samurai:user', JSON.stringify(user))
+        }
+
     })
+
+    if (setLocalStorage) cy.visit('/dashboard')
 })
