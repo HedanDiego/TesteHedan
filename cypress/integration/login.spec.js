@@ -25,9 +25,7 @@ describe('login', function () {
             loginPage.form(user)
             loginPage.submit()
 
-
             dashPage.header.userLoggedIn(user.name)
-
         })
     })
 
