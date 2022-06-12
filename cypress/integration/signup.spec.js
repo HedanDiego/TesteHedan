@@ -52,7 +52,7 @@ describe('cadastro', function () {
         })
     })
 
-    context.only('quando o email é incorreto', function () {
+    context('quando o email é incorreto', function () {
 
 
         it('deve exibir mensagem de alerta', function () {
