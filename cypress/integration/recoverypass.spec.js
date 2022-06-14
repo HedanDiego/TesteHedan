@@ -24,8 +24,6 @@ describe('regate de senha', function(){
 
             const message = 'Enviamos um e-mail para confirmar a recuperação de senha, cheque sua caixa de entrada.'
             fpPage.toast.shouldHaveText(message)
-
-            
         })
     })
 
@@ -45,8 +43,6 @@ describe('regate de senha', function(){
           rpPage.submit()
 
           rpPage.toast.shouldHaveText('Agora você já pode logar com a sua nova senha secreta.')
-          
-
         })
     })
 
